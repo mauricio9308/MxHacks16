@@ -1,0 +1,37 @@
+
+body {
+
+  margin: 0;
+  height: 100%;
+  background-color: #ededed;
+
+}
+
+html{
+height: 100%;
+}
+
+
+#login{
+background-color: #FFF;
+-webkit-box-shadow: -1px 11px 24px 0px rgba(0,0,0,0.47);
+-moz-box-shadow: -1px 11px 24px 0px rgba(0,0,0,0.47);
+box-shadow: -1px 11px 24px 0px rgba(0,0,0,0.47);
+
+}
+
+#altura {
+
+	height: 150px;
+}
+
+@media only screen and (max-width: 767px) {
+  #logo {
+    padding-left: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #logo {
+    padding-left: 30px;
+  }
+}
