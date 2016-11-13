@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" async src="js/validacioneslogin.js"></script>
+	<script type="text/javascript" async src="js/validacionessignup.js"></script>
 
 </head>
 <body class="animated fadeIn">
@@ -21,22 +21,52 @@
 		<div class="col s12 m12 l12" id="altura"></div>
 		<div class="col s1 m3 l4"></div>
 		<div class="col s10 m6 l4 animated bounceInUp" id="login">
-			<form method="POST" action="index.html" name="login" onsubmit="return validar();">
+			<form method="POST" action="" name="signup" onsubmit="return validar();">
 				<div class="col s12 m12 l12">
 					<br>
-					<h5 style="text-align: center;">Bienvenido</h5><a href="index.html"><img src="img/logo.png" width="50" class="right" alt="logo"></a>
+					<h5 style="text-align: center;">Registrate</h5><a href="index.html"><img src="img/logo.png" width="50" class="right" alt="logo"></a>
 					<br>
 				</div>
 				<div>
 					<div class="input-field col s12">
-						<input id="mail" type="email" class="validate">
-						<label for="mail" data-error="Formato no valido" data-success="">Usuario</label>
+						<input id="nombre" type="text" class="validate">
+						<label for="nombre">Nombre(s)</label>
+					</div>
+				</div>
+				<div>
+					<div class="input-field col s6">
+						<input id="apellidopaterno" type="text" class="validate">
+						<label for="apellidopaterno">Apellido Paterno </label>
+					</div>
+				</div>
+				<div>
+					<div class="input-field col s6">
+						<input id="apellidomaterno" type="text" class="validate">
+						<label for="apellidomaterno">Apellido Materno</label>
 					</div>
 				</div>
 				<div>
 					<div class="input-field col s12">
+						<input id="correo" type="email" class="validate">
+						<label for="correo" data-error="Formato no valido" data-success="">Email</label>
+					</div>
+				</div>
+				<div>
+					<div class="input-field col s6">
 						<input id="pass" type="password" class="validate">
 						<label for="pass">Contraseña</label>
+					</div>
+				</div>
+				<div>
+					<div class="input-field col s6">
+						<input id="pass2" type="password" class="validate">
+						<label for="pass2">Confirma Contraseña</label>
+					</div>
+				</div>
+				<div>
+					<div class="input-field col s12">
+						<input id="user" type="text" class="validate">
+						<label for="user">Usuario</label>
 					</div>
 				</div>
 				<div class="col s12 m12 l12">
@@ -48,9 +78,7 @@
 				<br>
 			</form>
 			<div class="col s12 m12 l12">
-				<br>
-				<p style="text-align: center;"><a href="">He olvidado mi contraseña</a></p>
-				<p style="text-align: center;"><a href="registro.html">¿No tienes cuenta? Da clic aqui</a></p>
+				<p style="text-align: center;"><a href="login.html">¿Ya tienes cuenta? Da clic aqui</a></p>
 			</div>
 		</div>
 
