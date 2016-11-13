@@ -2558,7 +2558,7 @@ ul:not(.browser-default) li {
 }
 
 a {
-  color: #f44336;
+  color: #72d5ff;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -2872,9 +2872,10 @@ ul.staggered-list li {
 }
 
 footer.page-footer {
+  color: #000;
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #ee6e73;
+  background-color: #ffffff;
 }
 
 footer.page-footer .footer-copyright {
@@ -4960,7 +4961,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #f44336; /*Color acento*/
+  background-color: #72d5ff; /*Color acento*/
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
