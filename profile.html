@@ -14,33 +14,35 @@
 </head>
 <body>
 
-	<nav>
-		<div class="nav-wrapper">
-			<a href="index.html" class="brand-logo"><img id="logo" src="img/logo.png" class="animated fadeIn" height="52px"></a>
-			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-			<ul class="right hide-on-med-and-down">
-				<li><a href=""><img src="img/add.png"  class="animated fadeIn" style="padding-top: 10px;" height="39px"></a></li>
-				<li><a href="login.html" ><img src="img/cuenta.png"  class="animated fadeIn" style="padding-top: 10px;" height="39px"></a></li>
-			</ul>
-			<ul class="side-nav" id="mobile-demo">
-				<div class="row">
-					<li><h5 class="center-align">Atenas</h5></li>
-					<li><a href=""><img src="img/add.png" class="animated fadeIn col s2 m2 l2"><div class="col s8 m8 l8 valing-wrapper"><h6 class="valing">Agregar legislación</h6></div></a></li>
-					<li><a href="login.html"><img src="img/cuenta.png" class="animated fadeIn col s2 m2 l2"><div class="col s8 m8 l8 valing-wrapper"><h6 class="valing">Cuenta</h6></div></a></li>
-				</div>
-			</ul>
-		</div>
-		<script type="text/javascript"> $(".button-collapse").sideNav(); </script>
-	</nav>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="index.html" class="brand-logo"><img id="logo" src="img/logo.png" class="animated fadeIn" height="52px"></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="agregar.html"><img src="img/add.png"  class="animated fadeIn" style="padding-top: 10px;" height="39px"></a></li>
+					<li><a href="login.html" ><img src="img/cuenta.png"  class="animated fadeIn" style="padding-top: 10px;" height="39px"></a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<div class="row">
+						<li><h5 class="center-align">Atenas</h5></li>
+						<li><a href="agregar.html"><img src="img/add.png" class="animated fadeIn col s2 m2 l2"><div class="col s8 m8 l8 valing-wrapper"><h6 class="valing">Agregar legislación</h6></div></a></li>
+						<li><a href="login.html"><img src="img/cuenta.png" class="animated fadeIn col s2 m2 l2"><div class="col s8 m8 l8 valing-wrapper"><h6 class="valing">Cuenta</h6></div></a></li>
+					</div>
+				</ul>
+			</div>
+			<script type="text/javascript"> $(".button-collapse").sideNav(); </script>
+		</nav>
+		
 	<br>
 	<div class="container animated fadeIn">
 		<div class="row">
 			<div class="center">
 				<img src="img/politicoprofile.jpg" alt="Imagen de perfil" class="circle responsive-img"/>
 			</div>
-			<h5 class="animated fadeIn center-align">Name</h5>
-			<p class="flow-text center-align">
-				Enrique Peña nieto es el presidente mas cool y guapo de todos los tiempos por eso debemos adorarlo como nuesto lider supermo y ofrcer nuestras vidas para complacerlo
+			<h5 class="animated fadeIn center-align" id="nombre">Name</h5>
+			<h6 class="center-align" id="puesto">Presidente de méxico</h6>
+			<p class="flow-text center-align" id="descripcion">
+				Enrique Peña Nieto es un abogado y político mexicano, presidente de México desde el 1 de diciembre de 2012. Es abogado por la Universidad Panamericana y maestro en administración de empresas por el Instituto Tecnológico y de Estudios Superiores. 
 			</p>
 			<div class="container">
 				<div class="col s6 m6 l6 center-align">
@@ -70,7 +72,7 @@
 					<textarea class="col s12 m12 l12" placeholder="Ingresa tu comentario" type="text"></textarea>
 					<hr>
 					<div class="col s12 m12 l12">
-						<button class="btn waves-effect waves-light right animated " type="submit" name="action" >Enviar
+						<button class="btn waves-effect waves-light right animated bounceIn" type="submit" name="action" >Enviar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>
@@ -97,16 +99,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col l6 s12">
-				<h5>Contenido</h5>
-				<p >bla blab lab bla</p>
+				<h5>Atenas</h5>
+				<p >Participación politica en linea</p>
 			</div>
 			<div class="col l4 offset-l2 s12">
-				<h5 >Links</h5>
+				<h5 >Cosas de interes</h5>
 				<ul>
-					<li><a href="#!">Link 1</a></li>
-					<li><a href="#!">Link 2</a></li>
-					<li><a href="#!">Link 3</a></li>
-					<li><a href="#!">Link 4</a></li>
+					<li><a href="#!">Aviso de privacidad</a></li>
+					<li><a href="#!">Terminos de uso</a></li>
+					<li><a href="#!">Sobre nosotros</a></li>
 				</ul>
 			</div>
 		</div>

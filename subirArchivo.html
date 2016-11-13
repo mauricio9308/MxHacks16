@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload File</title>      
+        <meta charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="estilosUploadFile.css" />
+        <script type="text/javascript">
+         
+              function selectedFile() {
+                var archivoSeleccionado = document.getElementById("myfile");
+                var file = archivoSeleccionado.files[0];
+                if (file) {
+                    var fileSize = 0;
+                    if (file.size > 1048576)
+                        fileSize = (Math.round(file.size * 100 / 1048576) / 100).toString() + ' MB';
+                    else
+                        fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + ' Kb';
+         
+                    var divfileSize = document.getElementById('fileSize');
+                    var divfileType = document.getElementById('fileType');
+                    divfileSize.innerHTML = 'Tamaño: ' + fileSize;
+                    divfileType.innerHTML = 'Tipo: ' + file.type;
+                     
+                }
+              }     
+         
+            function uploadFile(){
+                //var url = "http://localhost/ReadMoveWebServices/WSUploadFile.asmx?op=UploadFile";     
+                var url = "/ReadMoveWebServices/WSUploadFile.asmx/UploadFile";
+                var archivoSeleccionado = document.getElementById("myfile");
+                var file = archivoSeleccionado.files[0];
+                var fd = new FormData();
+                fd.append("archivo", file);
+                var xmlHTTP= new XMLHttpRequest();              
+                //xmlHTTP.upload.addEventListener("loadstart", loadStartFunction, false);
+                xmlHTTP.upload.addEventListener("progress", progressFunction, false);
+                xmlHTTP.addEventListener("load", transferCompleteFunction, false);
+                xmlHTTP.addEventListener("error", uploadFailed, false);
+                xmlHTTP.addEventListener("abort", uploadCanceled, false);               
+                xmlHTTP.open("POST", url, true);
+                //xmlHTTP.setRequestHeader('book_id','10');
+                xmlHTTP.send(fd);
+            }       
+             
+            function progressFunction(evt){
+                var progressBar = document.getElementById("progressBar");
+                var percentageDiv = document.getElementById("percentageCalc");
+                if (evt.lengthComputable) {
+                    progressBar.max = evt.total;
+                    progressBar.value = evt.loaded;
+                    percentageDiv.innerHTML = Math.round(evt.loaded / evt.total * 100) + "%";
+                }
+            }
+             
+            function loadStartFunction(evt){
+                alert('Comenzando a subir el archivo');
+            }
+            function transferCompleteFunction(evt){
+                alert('Transferencia completa');            
+                var progressBar = document.getElementById("progressBar");
+                var percentageDiv = document.getElementById("percentageCalc");
+                progressBar.value = 100;
+                percentageDiv.innerHTML = "100%";   
+            }   
+             
+            function uploadFailed(evt) {
+                alert("Hubo un error al subir el archivo.");
+            }
+     
+            function uploadCanceled(evt) {
+                alert("La operación se canceló o la conexión fue interrunpida.");
+            }
+             
+                             
+         
+        </script>
+    </head>
+    <body>  
+        <div id="wrap"> 
+            <div class="field"> 
+                <ul class="options">
+                    <li>
+                        <input type="file" id="myfile" name="myfile" class="rm-input" onchange="selectedFile();"/>
+                    </li>
+                    <li>
+                        <div id="fileSize"></div>
+                    </li>
+                    <li>
+                        <div id="fileType"></div>
+                    </li>
+                    <li>
+                        <input type="button" value="Subir Archivo" onClick="uploadFile()" class="rm-button" />
+                    </li>                    
+                </ul>
+            </div>
+            <progress id="progressBar" value="0" max="100" class="rm-progress"></progress> 
+            <div id="percentageCalc"></div>        
+        </div>
+    </body>
+</html>
